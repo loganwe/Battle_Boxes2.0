@@ -85,7 +85,7 @@
         const pmaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const ematerial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Set color to red
 
-        
+        const army= new Audio("army.mp3")
         const player = new THREE.Mesh(geometry, pmaterial);
         const enemy = new THREE.Mesh(geometry, ematerial);
         player.velocityY = 0; 
@@ -184,10 +184,10 @@
     function pause(){
         if(!gameOver){
             isPaused=!isPaused
+        army.play()
             endText.innerHTML=""
         }else{window.location.reload()}
     }
-
 
         // Render loop
         function animate() {
